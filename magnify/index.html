@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>放大镜</title>
+<style>
+*{margin:0; padding:0;}
+#demo{position:relative; margin:50px;}
+#small-box{position:absolute; width:100%; z-index:0;}
+#mark{position:absolute; width:408px; height:255px; background-color:#fff; opacity:0; filter: alpha(opacity=0); z-index:2;}
+#float-box{position:absolute; width:160px; height:120px; display:none; background-color:#ffffcc; border:1px solid #ccc; opacity:0.5; filter:alpha(opacity=50);}
+#small-box img{border:1px solid #ccc;}
+#big-box{display:none; position:absolute; top:0; left:460px; width:400px; height:300px; overflow:hidden; border:1px solid #ccc;}
+#big-box img {position: absolute;}
+</style>
+</head>
+<body>
+<div id="demo">
+	<div id="small-box">
+		<div id="mark"></div>
+		<div id="float-box"></div>
+		<img src="smallpic.jpg">
+	</div>
+	<div id="big-box">
+		<img src="bigpic.jpg" />
+	</div>
+</div>
+<script type="text/javascript" src="magnify.js"></script>
+</body>
+</html>

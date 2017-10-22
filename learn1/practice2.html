@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>天猫商品页</title>
+<style type="text/css">
+*{padding:0; margin:0;}
+#shopbox{width:236px; height:475px; margin:50px 0 0 30px; text-align:center; overflow:hidden;}
+#shopbox dl dt{display:block; background-color:#c00; color:#fff; height:35px; line-height:35px; font-size:19px;}
+#shopbox dl dd{height:220px;}
+#shopbox dl dd:last-child{border-top:1px solid #eee;}
+#shopbox dl dd a{text-decoration:none;}
+#shopbox dl dd h3{font-size:20px; color:#000; padding-top:15px;}
+#shopbox dl dd p{font-size:15px; color:#ccc;}
+#shopbox dl dd img{ padding-top:10px;width:140px; height:140px;}
+</style>
+<script src="move.js"></script>
+<script>
+window.onload=function(){
+	var Img=document.getElementById('shopbox').getElementsByTagName('img');
+	for(var i=0;i<Img.length;i++){
+		Img[i].onmouseover=function(){
+			startMove(this,{width:150,height:150});
+		}
+		Img[i].onmouseout=function(){
+			startMove(this,{width:140,height:140});
+		}
+	}
+}
+</script>
+</head>
+
+<body>
+<div id="shopbox">
+	<dl>
+		<dt>潮流前沿</dt>
+		<dd><a href="#"><h3>焕新</h3><p>品牌精选新品</p><img src="img/TB18q67LVXXXXbBXVXXSutbFXXX.jpg"/></a></dd>
+		<dd><a href="#"><h3>全球时尚</h3><p>大牌精致时尚</p><img src="img/TB1dFKNKVXXXXX4apXXSutbFXXX.jpg"/></a></dd>
+	</dl>
+</div>
+</body>
+</html>
